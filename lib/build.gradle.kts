@@ -46,7 +46,7 @@ kotlin {
 }
 
 android {
-  namespace = "io.github.aryapreetam.fiblib"
+  namespace = "io.github.aryapreetam.cmplocationpicker"
   compileSdk = 35
 
   defaultConfig {
@@ -62,12 +62,12 @@ dependencies {
 //https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-publish-libraries.html
 mavenPublishing {
   publishToMavenCentral()
-  coordinates("io.github.aryapreetam", "fiblib", "0.0.3")
+  coordinates("io.github.aryapreetam", "cmp-locationpicker", "0.0.1")
 
   pom {
-    name = "Fibonacci Library"
-    description = "Compose Multiplatform library for fibonacci numbers"
-    url = "https://aryapreetam.github.io/cmp-lib-template" //todo
+    name = "Location Picker"
+    description = "Location picker for Compose Multiplatform(Only OpenStreetMap supported right now, additional maps support coming)"
+    url = "https://aryapreetam.github.io/cmp-locationpicker" //todo
 
     licenses {
       license {
@@ -84,7 +84,7 @@ mavenPublishing {
     }
 
     scm {
-      url = "https://github.com/aryapreetam/cmp-lib-template" //todo
+      url = "https://github.com/aryapreetam/cmp-locationpicker" //todo
     }
   }
   // Sign publications if either local keyId or CI signingInMemoryKey is available
