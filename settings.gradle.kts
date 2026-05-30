@@ -1,4 +1,4 @@
-rootProject.name = "cmp-locationpicker"
+rootProject.name = "cmp-locationpicker-root"
 
 // Composite build: consume local `cmp-webview` during development.
 // We add explicit dependency substitution so `io.github.aryapreetam:cmp-webview:<version>`
