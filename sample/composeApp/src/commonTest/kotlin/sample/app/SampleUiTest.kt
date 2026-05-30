@@ -1,20 +1,13 @@
 package sample.app
 
-import androidx.compose.ui.test.ExperimentalTestApi
-import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.performTextInput
-import androidx.compose.ui.test.runComposeUiTest
-import fiblib.getFibonacciNumbers
 import kotlin.test.Test
+import kotlin.test.assertTrue
+import io.github.aryapreetam.cmplocationpicker.protocol.LocationPickerProtocol
 
 class SampleUITest {
-
-  @OptIn(ExperimentalTestApi::class)
   @Test
-  fun sampleUiTest() = runComposeUiTest {
-    setContent { App() }
-    val num = 7
-    onNodeWithText("Enter a number(1-9)").performTextInput("$num")
-    onNodeWithText("First $num fibonacci numbers=${getFibonacciNumbers(num).joinToString(", ")}").assertExists()
+  fun protocolSmokeTest() {
+    val res = LocationPickerProtocol.parseIncoming("{\"type\":\"ready\",\"id\":\"1\"}")
+    assertTrue(res is LocationPickerProtocol.ParseResult.Success)
   }
 }

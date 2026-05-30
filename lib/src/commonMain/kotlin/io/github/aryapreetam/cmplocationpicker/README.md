@@ -1,26 +1,16 @@
-# Your Library Code Goes Here
+# `io.github.aryapreetam.cmplocationpicker`
 
-This is your library's main package: `io.github.aryapreetam.cmplocationpicker`
+This is the root package for `cmp-locationpicker`.
 
-## Getting Started
+Most apps will use:
 
-Add your library code in this directory. The example `fiblib` package is kept as a reference - you can delete it when you're ready.
+- `io.github.aryapreetam.cmplocationpicker.ui.LocationPickerDialog`
 
-## Package Structure
+Key packages:
 
-```
-lib/src/
-├── commonMain/kotlin/
-│   ├── io/github/aryapreetam/cmplocationpicker/          # Your library code (THIS DIRECTORY)
-│   └── fiblib/                  # Example code (can be deleted)
-└── commonTest/kotlin/
-    ├── io/github/aryapreetam/cmplocationpicker/          # Your tests
-    └── fiblib/                  # Example tests (can be deleted)
-```
+- `model`: data types like `LatLng`
+- `ui`: the public Compose dialog + configuration (`LocationPickerStrings`, `LocationPickerOptions`)
+- `provider`: extension points (`IpLocationProvider`, `MapProvider`)
+- `core`/`protocol`: internal core + JS↔Compose protocol
 
-## Next Steps
-
-1. Add your library code here
-2. Update the sample app to use your library
-3. Delete the `fiblib` example when ready
-4. Write tests in `lib/src/commonTest/kotlin/io/github/aryapreetam/cmplocationpicker/`
+For installation and end-to-end examples, see the repo `README.MD`.

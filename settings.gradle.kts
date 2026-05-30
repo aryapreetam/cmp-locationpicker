@@ -1,5 +1,16 @@
 rootProject.name = "cmp-locationpicker"
 
+// Composite build: consume local `cmp-webview` during development.
+// We add explicit dependency substitution so `io.github.aryapreetam:cmp-webview:<version>`
+// resolves to the included build's `:lib` project without requiring publishing.
+// includeBuild("../cmp-webview") {
+//   dependencySubstitution {
+//     substitute(module("io.github.aryapreetam:cmp-webview")).using(project(":lib"))
+//   }
+// }
+
+
+
 pluginManagement {
   repositories {
     google {
@@ -10,6 +21,8 @@ pluginManagement {
         includeGroupByRegex("android.*")
       }
     }
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
     gradlePluginPortal()
     mavenCentral()
   }
@@ -25,7 +38,9 @@ dependencyResolutionManagement {
         includeGroupByRegex("android.*")
       }
     }
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     mavenCentral()
+    mavenLocal()
   }
 }
 
@@ -35,4 +50,5 @@ plugins {
 
 include(":lib")
 include(":sample:composeApp")
+include(":sample:androidApp")
 
