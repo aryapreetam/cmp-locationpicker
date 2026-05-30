@@ -40,7 +40,7 @@ kotlin {
       implementation(libs.compose.ui.multiplatform)
       implementation(libs.compose.foundation)
       implementation(libs.compose.material3)
-      implementation(project(":lib"))
+      implementation(project(":cmp-locationpicker"))
     }
 
     commonTest.dependencies {

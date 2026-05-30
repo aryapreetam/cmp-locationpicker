@@ -27,7 +27,7 @@ Add the dependency (replace version as needed):
 implementation("io.github.aryapreetam:cmp-locationpicker:0.0.2")
 ```
 
-Note: the library UI itself uses only `compose.foundation`/`compose.ui` (no `compose.material3` dependency in `:lib`).
+Note: the library UI itself uses only `compose.foundation`/`compose.ui` (no `compose.material3` dependency in `:cmp-locationpicker`).
 
 ## Usage
 
@@ -107,7 +107,7 @@ If you ship the default v0 provider in production, make sure you comply with att
 From a checkout that includes the composite builds:
 
 - Unit tests (pure core + protocol):
-  - `./gradlew :lib:testDebugUnitTest`
+  - `./gradlew :cmp-locationpicker:testDebugUnitTest`
 - Desktop/JVM tests (sample):
   - `./gradlew :sample:composeApp:jvmTest`
 - Android instrumentation (sample):

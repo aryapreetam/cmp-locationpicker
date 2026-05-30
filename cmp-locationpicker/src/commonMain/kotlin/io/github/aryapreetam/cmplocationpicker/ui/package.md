@@ -11,4 +11,4 @@ Configuration types:
 - `LocationPickerStrings` (UI strings; defaults are English)
 - `LocationPickerOptions` (Nominatim search options)
 
-Note: the library module (`:lib`) uses only `compose.foundation`/`compose.ui`.
+Note: the library module (`:cmp-locationpicker`) uses only `compose.foundation`/`compose.ui`.

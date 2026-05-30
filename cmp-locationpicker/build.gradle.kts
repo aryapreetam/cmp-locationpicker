@@ -26,9 +26,6 @@ kotlin {
   jvm()
   wasmJs {
     browser()
-    compilerOptions {
-      freeCompilerArgs.add("-Xklib-duplicated-unique-name-strategy=allow-all-with-warning")
-    }
   }
   iosX64()
   iosArm64()
@@ -72,9 +69,6 @@ kotlin {
 
   //https://kotlinlang.org/docs/native-objc-interop.html#export-of-kdoc-comments-to-generated-objective-c-headers
   targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
-    compilerOptions {
-      freeCompilerArgs.add("-Xklib-duplicated-unique-name-strategy=allow-all-with-warning")
-    }
     compilations["main"].compileTaskProvider.configure {
       compilerOptions {
         freeCompilerArgs.add("-Xexport-kdoc")

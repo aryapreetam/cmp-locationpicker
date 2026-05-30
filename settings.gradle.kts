@@ -2,10 +2,10 @@ rootProject.name = "cmp-locationpicker"
 
 // Composite build: consume local `cmp-webview` during development.
 // We add explicit dependency substitution so `io.github.aryapreetam:cmp-webview:<version>`
-// resolves to the included build's `:lib` project without requiring publishing.
+// resolves to the included build's `:cmp-locationpicker` project without requiring publishing.
 // includeBuild("../cmp-webview") {
 //   dependencySubstitution {
-//     substitute(module("io.github.aryapreetam:cmp-webview")).using(project(":lib"))
+//     substitute(module("io.github.aryapreetam:cmp-webview")).using(project(":cmp-webview"))
 //   }
 // }
 
@@ -48,7 +48,7 @@ plugins {
   id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-include(":lib")
+include(":cmp-locationpicker")
 include(":sample:composeApp")
 include(":sample:androidApp")
 

@@ -235,7 +235,7 @@ mavenCentralPassword=your-sonatype-password
 
 Then test:
 ```bash
-./gradlew :lib:publishToMavenLocal
+./gradlew :cmp-locationpicker:publishToMavenLocal
 ```
 
 ### 4.2 CI Publishing Test
