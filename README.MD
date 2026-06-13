@@ -1,13 +1,13 @@
 <h1 align="center">CMP Location Picker</h1>
 
 <p align="center">
-  <a href="https://github.com/aryapreetam/cmp-webview/actions/workflows/release.yml">
-    <img src="https://github.com/aryapreetam/cmp-webview/actions/workflows/release.yml/badge.svg" alt="Release workflow status">
+  <a href="https://github.com/aryapreetam/cmp-locationpicker/actions/workflows/release.yml">
+    <img src="https://github.com/aryapreetam/cmp-locationpicker/actions/workflows/release.yml/badge.svg" alt="Release workflow status">
   </a>
-  <a href="https://mvnrepository.com/artifact/io.github.aryapreetam/cmp-webview">
-    <img src="https://img.shields.io/maven-central/v/io.github.aryapreetam/cmp-webview?label=Maven%20Central&color=blue" alt="Maven Central Version">
+  <a href="https://mvnrepository.com/artifact/io.github.aryapreetam/cmp-locationpicker">
+    <img src="https://img.shields.io/maven-central/v/io.github.aryapreetam/cmp-locationpicker?label=Maven%20Central&color=blue" alt="Maven Central Version">
   </a>
-  <a href="https://github.com/aryapreetam/cmp-webview/blob/main/LICENSE">
+  <a href="https://github.com/aryapreetam/cmp-locationpicker/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License">
   </a>
 </p>
@@ -32,7 +32,7 @@ Location picker dialog for **Compose Multiplatform** (Android / iOS / Desktop / 
 Add the dependency (replace version as needed):
 
 ```kotlin
-implementation("io.github.aryapreetam:cmp-locationpicker:0.0.2")
+implementation("io.github.aryapreetam:cmp-locationpicker:0.0.3")
 ```
 
 Note: the library UI itself uses only `compose.foundation`/`compose.ui` (no `compose.material3` dependency in `:cmp-locationpicker`).
@@ -63,6 +63,8 @@ strings = io.github.aryapreetam.cmplocationpicker.ui.LocationPickerStrings(
   closeContentDescription = "Close",
   loadingMap = "Loading map…",
   searchPlaceholder = "Search location…",
+  noResults = "No results",
+  searchError = "Search error",
 )
 ```
 
@@ -97,7 +99,7 @@ The default v0 implementation may perform network requests to third parties:
 
 - `https://ipapi.co/json/` (best-effort initial center)
 - `https://unpkg.com/...` (Leaflet assets)
-- `https://{s}.tile.openstreetmap.org/...` (map tiles)
+- `https://{s}.basemaps.cartocdn.com/...` (map tiles)
 - `https://nominatim.openstreetmap.org/search` (search suggestions)
 
 If your app must not contact these services, provide your own `IpLocationProvider` and/or `MapProvider`.
@@ -106,7 +108,7 @@ If your app must not contact these services, provide your own `IpLocationProvide
 
 If you ship the default v0 provider in production, make sure you comply with attribution requirements:
 
-- OpenStreetMap tile usage typically requires displaying an attribution such as `© OpenStreetMap contributors`.
+- Map tile usage (Carto Voyager / OpenStreetMap) typically requires displaying an attribution such as `© OpenStreetMap contributors` and `© CARTO`.
 - Leaflet is BSD-2-Clause licensed; keep license notices as required by your distribution.
 
 ## Testing
