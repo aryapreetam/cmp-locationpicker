@@ -41,7 +41,7 @@ kotlin {
       implementation(libs.ktor.client.core)
 
       // WebView (Android/iOS/JVM/WASM) for rendering controlled `htmlContent`.
-      implementation("io.github.aryapreetam:cmp-webview:0.0.3")
+      implementation("io.github.aryapreetam:cmp-webview:0.0.4")
     }
 
     commonTest.dependencies {
